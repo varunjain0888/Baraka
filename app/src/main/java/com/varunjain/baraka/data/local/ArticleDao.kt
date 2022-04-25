@@ -20,7 +20,7 @@ interface ArticleDao {
     @Transaction
     suspend fun insertMapper(items: List<ArticleDataItem>) {
         items.forEach { item->
-            var article = ArticleEntity(
+            val article = ArticleEntity(
                     title = item.title,
                     url = item.url,
                     author = item.author,
